@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-.container {
-  width: 100%;
+.backgroundApp {
   height: 100vh;
   background-image: linear-gradient(to right, #f3b07c, #fcd283);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: all 10s linear;
+  width: 100%;
 }
 
 .weather img {
-  margin-top: -5rem;
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
+  margin-top: -2rem;
 }
 
 .weather-app {
+  transition: all 10s linear;
   width: 35rem;
   height: 65rem;
   background-image: linear-gradient(to top, #f3b07c, #fcd283);
@@ -55,12 +60,12 @@
 
 .search-bar input {
   width: 25rem;
-  height: 2.5rem;
+  height: 4rem;
   background-color: transparent;
   border: 0.2rem solid #676394;
   border-radius: 3rem;
   outline: none;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 1rem 3rem 1rem 2rem;
   font-size: 1.6rem;
   color: #484569;
 }
@@ -99,7 +104,7 @@
 
 .weather-type {
   position: absolute;
-  top: 48%;
+  top: 40%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -108,7 +113,7 @@
 
 .temp {
   position: absolute;
-  top: 55%;
+  top: 45%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 9rem;
@@ -120,14 +125,15 @@
 
 .weather-date {
   position: absolute;
-  bottom: 22%;
+  bottom: 30%;
   font-size: 1.6rem;
   color: #484569;
 }
 
 .weather-data {
   width: 100%;
-  bottom: 2rem;
+  bottom: -1rem;
+  position: absolute;
   display: flex;
   column-gap: 2rem;
   padding: 4rem 2rem;
@@ -159,4 +165,14 @@
 .data {
   font-size: 2rem;
   color: #2f2e57;
+}
+.not-found  {
+  font-size: 3rem;
+  color: #484569;
+  margin-top: 5rem;
+  text-shadow: -0.3rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.loader {
+  width: 5rem;
+  margin-top: 10rem;
 }

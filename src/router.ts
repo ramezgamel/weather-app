@@ -1,9 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { lazy } from "react";
-const WeatherApp = lazy(() => import("./apps/WeatherApp"));
+import Layout from "./components/Layout";
+const WeatherApp = lazy(() => import("./apps/weatherApp/WeatherApp"));
+const QuoteApp = lazy(() => import("./apps/QuoteApp/QuoteApp"));
 const router = createBrowserRouter([
-  { path: "/", Component: App },
-  { path: "/weatherApp", Component: WeatherApp },
+  {
+    path: "/",
+    Component: Layout,
+    children: [
+      { index: true, Component: App },
+      {
+        path: "/weatherApp",
+        Component: WeatherApp,
+      },
+      {
+        path: "/quoteApp",
+        Component: QuoteApp,
+      },
+    ],
+  },
 ]);
 export default router;
