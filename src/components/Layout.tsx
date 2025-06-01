@@ -5,11 +5,11 @@ export default function Layout() {
     <div className="bg-gradient-to-r from-[#57d6d4] to-[#71eeec]">
       <Link
         to="/"
-        className="text-6xl absolute top-8 left-10 cursor-pointer hover:text-gray-400 transition-colors duration-300 hover:scale-120"
+        className="text-5xl absolute top-7 left-10 cursor-pointer hover:text-gray-400 transition-colors duration-300 hover:scale-120"
       >
         <i className="fa-solid fa-arrow-left"></i>
       </Link>
-      <main className="flex  items-center justify-center h-screen">
+      <main className="flex items-center justify-center h-screen">
         <Outlet />
       </main>
     </div>
