@@ -18,6 +18,12 @@ function App() {
       >
         Quote
       </Link>
+      <Link
+        to="/calendarApp"
+        className="w-[12rem] h-[12rem] flex items-center justify-center text-4xl rounded-4xl hover:bg-blue-400 hover:scale-110 transition-all bg-blue-500 text-white"
+      >
+        Calendar
+      </Link>
     </nav>
   );
 }

@@ -4,6 +4,7 @@ import { lazy } from "react";
 import Layout from "./components/Layout";
 const WeatherApp = lazy(() => import("./apps/weatherApp/WeatherApp"));
 const QuoteApp = lazy(() => import("./apps/QuoteApp/QuoteApp"));
+const CalendarApp = lazy(() => import("./apps/CalendarApp/CalendarApp"));
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/quoteApp",
         Component: QuoteApp,
+      },
+      {
+        path: "/calendarApp",
+        Component: CalendarApp,
       },
     ],
   },
